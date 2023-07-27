@@ -1,0 +1,22 @@
+{
+  "compilerOptions": {
+    "baseUrl": ".",
+    "rootDir": ".",
+    "declaration": true,
+    "declarationMap": false,
+    "incremental": true,
+    "noEmitOnError": true,
+    "skipLibCheck": true,
+    "paths": {
+      "types/*": ["./packages/types/*"],
+    },
+  },
+  "include": [
+    "./packages/**/*",
+  ],
+  "exclude": [
+    "**/*/node_modules",
+    "**/*/dist",
+    "**/*.test.tsx"
+  ],
+}
