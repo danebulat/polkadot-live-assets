@@ -1,0 +1,21 @@
+{
+  "name": "@polkadotlive/types",
+  "license": "Apache-2.0",
+  "version": "0.1.0",
+  "type": "module",
+  "author": "Ross Bulat",
+  "description": "Types for Polkadot Live Desktop Client.",
+  "keywords": [
+    "Polkadot",
+    "UI"
+  ],
+  "bugs": {
+    "url": "https://github.com/rossbulat/polkadot-live-assets/issues"
+  },
+  "homepage": "https://github.com/rossbulat/polkadot-live-assets#readme",
+  "devDependencies": {
+    "@polkadot/types": "^10.9.1",
+    "bignumber.js": "^9.1.1",
+    "electron": "^25.3.2"
+  }
+}
