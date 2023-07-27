@@ -1,0 +1,41 @@
+name: Publish
+
+on:
+  push:
+    branches: [main]
+
+jobs:
+  npm-publish:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3.5.0
+      - run: yarn install
+      - uses: actions/setup-node@v3
+        with:
+          node-version: 18
+          registry-url: https://registry.npmjs.org
+      - name: Build NPM Packages
+        run: yarn build
+      - name: New 'types' version
+        id: types_version
+        uses: PostHog/check-package-version@v2
+        with:
+          path: "./packages/types"
+
+      - name: Publish 'types' Dry Run
+        run: npm publish --unsafe-perm --dry-run
+        working-directory: "./packages/types"
+      - name: Publish 'types'
+        if: steps.types_version.outputs.is-new-version == 'true'
+        run: npm publish
+        working-directory: "./packages/types"
+        env:
+          NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
+
+  all:
+    # This dummy job depends on all the mandatory checks. It succeeds if and only if all CI checks
+    # are successful.
+    needs: [npm-publish]
+    runs-on: ubuntu-latest
+    steps:
+      - run: echo Success
