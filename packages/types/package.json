@@ -1,7 +1,7 @@
 {
   "name": "@polkadot-live/types",
   "license": "GPL-3.0-only",
-  "version": "0.1.5",
+  "version": "0.1.6",
   "type": "module",
   "author": "Ross Bulat",
   "description": "Polkadot Live Types",
