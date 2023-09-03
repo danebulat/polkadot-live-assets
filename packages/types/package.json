@@ -15,7 +15,7 @@
   "homepage": "https://github.com/rossbulat/polkadot-live-assets#readme",
   "devDependencies": {
     "@polkadot/types": "^10.9.1",
-    "bignumber.js": "^9.1.1",
+    "bignumber.js": "^9.1.2",
     "electron": "^26.1.0"
   }
 }
