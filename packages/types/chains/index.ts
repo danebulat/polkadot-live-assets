@@ -9,4 +9,5 @@ export type ChainID = "Polkadot";
 // Supported chain states.
 export type SomeChainState = PolkadotAccountState;
 
+// Connection status of a chain.
 export type ChainStatus = "connecting" | "connected" | "disconnected";
