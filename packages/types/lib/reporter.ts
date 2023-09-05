@@ -1,7 +1,7 @@
 // Copyright 2023 @paritytech/polkadot-live authors & contributors
 // SPDX-License-Identifier: Apache-2.0
 
-import { AnyJson, ExtendedAccount } from "@polkadotlive/types";
+import { AnyJson, ExtendedAccount } from "@polkadot-live/types";
 import { ChainID } from "../chains";
 import { AnyData } from "./misc";
 
