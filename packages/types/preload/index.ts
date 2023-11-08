@@ -40,7 +40,7 @@ export interface PreloadAPI {
   requestInitTx: ApiRequestInitTx;
   requestResetTx: ApiEmptyRequest;
   requestDismissEvent: ApiRequestDismissEvent;
-  reportSignedVaultTx: ApRreportSignedVaultTx;
+  reportSignedVaultTx: ApiReportSignedVaultTx;
   reportTx: APIReportTx;
   reportTxStatus: ApiReportTxStatus;
 
@@ -129,4 +129,4 @@ type APIReportTxData = {
   setGenesisHash: AnyJson;
 };
 
-type ApRreportSignedVaultTx = (signature: AnyJson) => void;
+type ApiReportSignedVaultTx = (signature: AnyJson) => void;
